@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Name: Brennon Hahs -->
+<!-- CWID: 887487148 -->
+<!-- Email: brennonhahs@csu.fullerton.edu -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/gradient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/redSw"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:checked="true"
+        android:text="Red"
+        android:thumbTint="#FF0000"
+        app:layout_constraintBottom_toTopOf="@+id/greenSw"
+        app:layout_constraintEnd_toEndOf="@+id/greenSw"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/blueSw"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:checked="true"
+        android:text="Blue"
+        android:thumbTint="#0000FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.218"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.537"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/greenSw"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:checked="true"
+        android:text="Green"
+        android:thumbTint="#00FF00"
+        app:layout_constraintBottom_toTopOf="@+id/blueSw"
+        app:layout_constraintEnd_toEndOf="@+id/blueSw"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <SeekBar
+        android:id="@+id/blueBar"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="172dp"
+        android:layout_height="0dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="100"
+        android:progressTint="#0000FF"
+        android:thumbTint="#5C5C5C"
+        app:layout_constraintBottom_toBottomOf="@+id/blueSw"
+        app:layout_constraintStart_toEndOf="@+id/blueSw"
+        app:layout_constraintTop_toTopOf="@+id/blueSw"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <SeekBar
+        android:id="@+id/greenBar"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="172dp"
+        android:layout_height="0dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="100"
+        android:progressTint="#00FF00"
+        android:thumbTint="#5C5C5C"
+        app:layout_constraintBottom_toBottomOf="@+id/greenSw"
+        app:layout_constraintStart_toEndOf="@+id/greenSw"
+        app:layout_constraintTop_toTopOf="@+id/greenSw"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <SeekBar
+        android:id="@+id/redBar"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="172dp"
+        android:layout_height="0dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="100"
+        android:progressTint="#FF0000"
+        android:thumbTint="#5C5C5C"
+        app:layout_constraintBottom_toBottomOf="@+id/redSw"
+        app:layout_constraintStart_toEndOf="@+id/redSw"
+        app:layout_constraintTop_toTopOf="@+id/redSw"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/viewBorder2"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:background="#FF0000"
+        android:backgroundTint="#BBBBBB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.396"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.437" />
+
+    <View
+        android:id="@+id/colorView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.436" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.876" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="407dp" />
+
+    <EditText
+        android:id="@+id/redNum"
+        android:layout_width="62dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="1.0"
+        app:layout_constraintBottom_toBottomOf="@+id/redBar"
+        app:layout_constraintStart_toEndOf="@+id/redBar"
+        app:layout_constraintTop_toTopOf="@+id/redBar" />
+
+    <EditText
+        android:id="@+id/greenNum"
+        android:layout_width="62dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="1.0"
+        app:layout_constraintBottom_toBottomOf="@+id/greenBar"
+        app:layout_constraintStart_toEndOf="@+id/greenBar"
+        app:layout_constraintTop_toTopOf="@+id/greenBar" />
+
+    <EditText
+        android:id="@+id/blueNum"
+        android:layout_width="62dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="1.0"
+        app:layout_constraintBottom_toBottomOf="@+id/blueBar"
+        app:layout_constraintStart_toEndOf="@+id/blueBar"
+        app:layout_constraintTop_toTopOf="@+id/blueBar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
